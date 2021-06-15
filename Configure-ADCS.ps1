@@ -45,7 +45,7 @@ Install-ADcsCertificationAuthority `
 -Credential (Get-Credential) `
 -CAType 'EnterpriseRootCa'  `
 -CACommonName $env:COMPUTERNAME `
--CADistinguishedNameSuffix ([ADSI]"LDAP://RootDSE").rootDomainNamingContext `
+-CADistinguishedNameSuffix ([ADSI]"LDAP://RootDSE").rootDomainNamingContext.value `
 -CryptoProviderName 'RSA#Microsoft Software Key Storage Provider' `
 -KeyLength 2048 `
 -HashAlgorithmName 'SHA256' `
