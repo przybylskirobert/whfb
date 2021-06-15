@@ -42,18 +42,18 @@ start-sleep -Seconds 300
 Write-Verbose "Configuring ADCS"
 
 Install-ADcsCertificationAuthority `
-–Credential (Get-Credential) `
+-Credential (Get-Credential) `
 -CAType 'EnterpriseRootCa'  `
-–CACommonName $env:COMPUTERNAME `
-–CADistinguishedNameSuffix ([ADSI]"LDAP://RootDSE").rootDomainNamingContext `
-–CryptoProviderName 'RSA#Microsoft Software Key Storage Provider' `
+-CACommonName $env:COMPUTERNAME `
+-CADistinguishedNameSuffix ([ADSI]"LDAP://RootDSE").rootDomainNamingContext `
+-CryptoProviderName 'RSA#Microsoft Software Key Storage Provider' `
 -KeyLength 2048 `
-–HashAlgorithmName 'SHA256' `
+-HashAlgorithmName 'SHA256' `
 -ValidityPeriod 'Years' `
-–ValidityPeriodUnits 10 `
-–DatabaseDirectory 'C:\windows\system32\certLog' `
-–LogDirectory 'c:\windows\system32\CertLog' `
-–Force
+-ValidityPeriodUnits 10 `
+-DatabaseDirectory 'C:\windows\system32\certLog' `
+-LogDirectory 'c:\windows\system32\CertLog' `
+-Force
 
 #endregion
 
