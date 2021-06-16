@@ -1,7 +1,7 @@
 Throw "This is not a robust file"
 
 .\Create-ResourceGroup.ps1 -ResourceGroupPrefix 'rg' -ResourceGroupLocation 'northeurope' -LocationShortName 'neu'
-.\Create-VirtualNetwork.ps1 -ResourceGroupName "whfb-rg-network-weu" -Location "northeurope" -LocationShortName 'neu' -VirtualNetworkPrefix '192.168' -Verbose
+.\Create-VirtualNetwork.ps1 -ResourceGroupName "rg-network-weu" -Location "northeurope" -LocationShortName 'neu' -VirtualNetworkPrefix '10.10' -Verbose
 
 $List = @(
     $(New-Object PSObject -Property @{Name = 'vm-adds01-neu'; Size = 'Standard_DS1_v2'; Vnet = 'vnet-main-neu'; Subnet = 'snet-adds-main'; IP = "10.10.0.68"; ResourceGroup = 'rg-ad-neu' }),
