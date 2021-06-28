@@ -7,6 +7,7 @@ This is my place where I'm putting all the scripts and config files regarding Wi
 Scripts from this repo will help you with Windows Hello for Business LAB deployment.
 LAB contains the following resources:
 - Resource Groups 
+--rg-ad-neu
 - Virtual network
 - Domain Controller
 - AD CS Server
@@ -24,4 +25,5 @@ All test machines should be deployed under the Hype-V server to simulate TPM usa
 ## Environment Deployment
 
 To deploy the environment open Steps.ps1 file and proceed according to the instructions.
+
 Scripts wlak through is available [here](https://www.azureblog.pl/tag/windows-hello/) 
