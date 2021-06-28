@@ -5,7 +5,8 @@ Throw "This is not a robust file"
 
 $List = @(
     $(New-Object PSObject -Property @{Name = 'vm-adds01-neu'; Size = 'Standard_DS1_v2'; Vnet = 'vnet-main-neu'; Subnet = 'snet-adds-main'; IP = "10.10.0.68"; ResourceGroup = 'rg-ad-neu' }),
-    $(New-Object PSObject -Property @{Name = 'vm-pki01-neu'; Size = 'Standard_DS1_v2'; Vnet = 'vnet-main-neu'; Subnet = 'snet-srv-main'; IP = "10.10.0.132"; ResourceGroup = 'rg-srv-neu' })
+    $(New-Object PSObject -Property @{Name = 'vm-pki01-neu'; Size = 'Standard_DS1_v2'; Vnet = 'vnet-main-neu'; Subnet = 'snet-srv-main'; IP = "10.10.0.132"; ResourceGroup = 'rg-srv-neu' }),
+    $(New-Object PSObject -Property @{Name = 'vm-hv01-neu'; Size = 'Standard_E4s_v3'; Vnet = 'vnet-main-neu'; Subnet = 'snet-srv-main'; IP = "10.10.0.133"; ResourceGroup = 'rg-srv-neu' })
 )
 .\Deploy-VirtualMachines.ps1 -List $List -Location "north europe" -Credential (Get-Credential)
 
